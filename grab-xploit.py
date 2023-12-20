@@ -480,7 +480,7 @@ def main():
  █▀▀ █▀█ ▄▀█ █▄▄ ▄▄ ▀▄▀ █▀█ █░░ █▀█ █ ▀█▀
  █▄█ █▀▄ █▀█ █▄█ ░░ █░█ █▀▀ █▄▄ █▄█ █ ░█░
  ''')
-        print("- this tools coded by NowMeee")
+        print("- this tools coded by y4ud")
         print("[1] — By keywordlist")
         print("[2] — By single query [ api under maintance ]")
         print("[3] — Subdomain Finder")

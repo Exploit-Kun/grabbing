@@ -317,11 +317,11 @@ headers = {
 }
 
 # Input API key
-api_key = getpass.getpass("Enter your API key:nomi-Kxc5m")
+api_key = getpass.getpass("Enter your API key: ")
 
 # Fungsi untuk menemukan subdomain
 def find_subdomains(domain, api_key):
-    url = f"https://v1.nomisec07.site/api/subdomain_finder?domain={domain}&apikey={nomi-Kxc5m}"
+    url = f"https://v1.nomisec07.site/api/subdomain_finder?domain={domain}&apikey={api_key}"
     try:
         response = requests.get(url)
         if response.status_code == 200:
@@ -382,7 +382,7 @@ def get_domain_list(query, extension, auto_reverse_ip, scan_cms_option, country=
             pass
 
     def get_ip_for_domain(domain):
-        url = f"https://v1.nomisec07.site/api/domain_to_ip?url={domain}&apikey={nomi-Kxc5m}"
+        url = f"https://v1.nomisec07.site/api/domain_to_ip?url={domain}&apikey={api_key}"
         try:
             response = requests.get(url)
             if response.status_code == 200:
@@ -394,7 +394,7 @@ def get_domain_list(query, extension, auto_reverse_ip, scan_cms_option, country=
         return None
 
     def reverse_ip_to_domains(ip):
-        url = f"https://v1.nomisec07.site/api/v2/reverseip?ip={ip}&apikey={nomi-Kxc5m}"
+        url = f"https://v1.nomisec07.site/api/v2/reverseip?ip={ip}&apikey={api_key}"
         try:
             response = requests.get(url)
             if response.status_code == 200:
@@ -437,7 +437,7 @@ def get_domain_list(query, extension, auto_reverse_ip, scan_cms_option, country=
     with open("nomi-result.txt", "a") as result_file:
         page = 1
         while True:
-            url = "https://v1.nomisec07.site/api/domain?page={}&domain={}&zone={}&country={}&isDead=false&apikey={}".format(
+            url = "https://v1.nomisec07.site/api/domain?page={}&domain={}&zone={}&country={}&isDead=false&apikey=nomi-Kxc5m".format(
                 page, query, extension, country, api_key)
             response = requests.get(url, headers=headers)
             if response.status_code == 200:
@@ -480,9 +480,9 @@ def main():
  █▀▀ █▀█ ▄▀█ █▄▄ ▄▄ ▀▄▀ █▀█ █░░ █▀█ █ ▀█▀
  █▄█ █▀▄ █▀█ █▄█ ░░ █░█ █▀▀ █▄▄ █▄█ █ ░█░
  ''')
-        print("- this tools coded by y4ud")
+        print("- this tools coded by NowMeee")
         print("[1] — By keywordlist")
-        print("[2] — By single query [ api under maintance ]")
+        print("[2] — By single query")
         print("[3] — Subdomain Finder")
         print("[4] — Run PHPUnit Scanner")
         print("[5] — Run Shell finder Scanner")
@@ -599,7 +599,7 @@ def main():
             res = []
 
             while page <= until_page:
-                url = f"https://v1.nomisec07.site/api/by-date?date={date}&startpage={page}&endpage={until_page}&apikey={nomi-Kxc5m}"
+                url = f"https://v1.nomisec07.site/api/by-date?date={date}&startpage={page}&endpage={until_page}&apikey=nomi-Kxc5m"
                 try:
                     response = requests.get(url)
                     if response.status_code == 200:
@@ -626,7 +626,7 @@ def main():
             print("— Developed By NomiSec07-Tech ( NowMeee )\n")
 
             urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-            api_url = "https://v1.nomisec07.site/api/v2/reverseip?ip={dom}&apikey={nomi-Kxc5m}"
+            api_url = "https://v1.nomisec07.site/api/v2/reverseip?ip={dom}&apikey={api_key}"
             file_input = input("List IPs: ")
             file_result = input("Result filename: ")
 
